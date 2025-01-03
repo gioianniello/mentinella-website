@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -19,10 +18,14 @@ body {
     padding: 1rem;
 }
 
-.top-menu a, .bottom-menu a {
+.top-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem; /* 4 caratteri più piccoli */
+}
+
+.top-menu a.light {
+    font-weight: 300; /* Helvetica Light */
 }
 
 .center-content {
@@ -34,16 +37,41 @@ body {
 
 .center-content h1 {
     font-size: 2rem;
-    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.highlight {
-    font-weight: bold;
+.mentinella-light {
+    font-weight: 300; /* Helvetica Light */
+    letter-spacing: 0.2rem;
+}
+
+.mentinella-bold {
+    font-weight: bold; /* Helvetica Bold */
+    letter-spacing: 0.2rem;
 }
 
 .bottom-menu {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.menu-list li {
+    margin: 0.5rem 0;
+}
+
+.menu-list a {
+    font-weight: bold; /* Helvetica Bold */
+    font-size: 2.5rem; /* 40px */
+    color: #fff;
+    text-decoration: none;
 }
