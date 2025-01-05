@@ -16,8 +16,8 @@
 }
 #Mentinella_Studio {
 	position: absolute;
-	width: 1920px;
-	height: 2031px;
+	width: 100%;
+	height: auto;
 	background-color: rgba(0,0,0,1);
 	overflow: hidden;
 	--web-view-name: Mentinella Studio;
