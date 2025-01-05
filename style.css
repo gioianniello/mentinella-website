@@ -1,8 +1,8 @@
-
 .mediaViewInfo {
 	--web-view-name: Mentinella Studio;
 	--web-view-id: Mentinella_Studio;
 	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
 }
 :root {
@@ -23,11 +23,12 @@
 	--web-view-name: Mentinella Studio;
 	--web-view-id: Mentinella_Studio;
 	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
 }
 #aaa {
 	border: 0;
-	left: 1725px;
+	left: 784px;
 	top: 386px;
 	position: absolute;
 	overflow: visible;
@@ -42,7 +43,7 @@
 }
 #aab {
 	border: 0;
-	left: 1816px;
+	left: 1704px;
 	top: 875px;
 	position: absolute;
 	overflow: visible;
@@ -87,7 +88,7 @@
 }
 #aae {
 	border: 0;
-	left: 1379px;
+	left: 141px;
 	top: 817px;
 	position: absolute;
 	overflow: visible;
@@ -102,7 +103,7 @@
 }
 #aaf {
 	border: 0;
-	left: 176px;
+	left: 140px;
 	top: 875px;
 	position: absolute;
 	overflow: visible;
@@ -117,7 +118,7 @@
 }
 #aag {
 	border: 0;
-	left: 363px;
+	left: 140px;
 	top: 933px;
 	position: absolute;
 	overflow: visible;
@@ -132,7 +133,7 @@
 }
 #aah {
 	border: 0;
-	left: 1912px;
+	left: 925px;
 	top: 1257px;
 	position: absolute;
 	overflow: visible;
@@ -147,7 +148,7 @@
 }
 #aai {
 	border: 0;
-	left: 696px;
+	left: 140px;
 	top: 1375px;
 	position: absolute;
 	overflow: visible;
@@ -159,9 +160,4 @@
 	font-weight: normal;
 	font-size: 37px;
 	color: rgba(255,255,255,1);
-}
-
-/** user defined rule set */
-.class1 {
-  background-color: lightgray;
 }
