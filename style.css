@@ -1,161 +1,163 @@
 .mediaViewInfo {
-	--web-view-name: Mentinella HOME;
-	--web-view-id: Mentinella_HOME;
-	--web-scale-on-resize: true;
-	--web-enable-deep-linking: true;
+    --web-view-name: Mentinella HOME;
+    --web-view-id: Mentinella_HOME;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: Mentinella_HOME;
+    --web-view-ids: Mentinella_HOME;
 }
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
 }
 #Mentinella_HOME {
-	position: absolute;
-	width: 1366px;
-	height: 1536px;
-	background-color: rgba(0,0,0,1);
-	overflow: hidden;
-	--web-view-name: Mentinella HOME;
-	--web-view-id: Mentinella_HOME;
-	--web-scale-on-resize: true;
-	--web-enable-deep-linking: true;
+    position: absolute;
+    width: 1366px;
+    height: 1536px;
+    background-color: rgba(0,0,0,1);
+    overflow: hidden;
+    --web-view-name: Mentinella HOME;
+    --web-view-id: Mentinella_HOME;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
 }
 #aaa {
-	border: 0;
-	left: 507px;
-	top: 265px;
-	position: absolute;
-	overflow: visible;
-	width: 353px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 507px;
+    top: 265px;
+    position: absolute;
+    overflow: visible;
+    width: 353px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
 }
 #aab {
-	border: 0;
-	left: 139px;
-	top: 489px;
-	position: absolute;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 139px;
+    top: 489px;
+    position: absolute;
+    overflow: visible;
+    width: 203px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
 }
 #aac {
-	border: 0;
-	left: 140px;
-	top: 547px;
-	position: absolute;
-	overflow: visible;
-	width: 513px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 140px;
+    top: 547px;
+    position: absolute;
+    overflow: visible;
+    width: 513px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
 }
 #aad {
-	border: 0;
-	left: 139px;
-	top: 605px;
-	position: absolute;
-	overflow: visible;
-	width: 353px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 139px;
+    top: 605px;
+    position: absolute;
+    overflow: visible;
+    width: 353px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
 }
 #aae {
-	border: 0;
-	left: 139px;
-	top: 663px;
-	position: absolute;
-	overflow: visible;
-	width: 500px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 139px;
+    top: 663px;
+    position: absolute;
+    overflow: visible;
+    width: 500px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
 }
 #aaf {
-	border: 0;
-	left: 1211px;
-	top: 615px;
-	position: absolute;
-	overflow: visible;
-	width: 77px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 1211px;
+    top: 615px;
+    position: absolute;
+    overflow: visible;
+    width: 77px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
 }
 #aag {
-	border: 0;
-	left: 1233px;
-	top: 588px;
-	position: absolute;
-	overflow: visible;
-	width: 55px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 1233px;
+    top: 588px;
+    position: absolute;
+    overflow: visible;
+    width: 55px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
 }
 #aah {
-	border: 0;
-	left: 648px;
-	top: 870px;
-	position: absolute;
-	overflow: visible;
-	width: 71px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 648px;
+    top: 870px;
+    position: absolute;
+    overflow: visible;
+    width: 71px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
 }
 #aai {
-	border: 0;
-	left: 139px;
-	top: 972px;
-	position: absolute;
-	overflow: visible;
-	width: 850px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 37px;
-	color: rgba(255,255,255,1);
+    border: 0;
+    left: 139px;
+    top: 972px;
+    position: absolute;
+    overflow: visible;
+    width: 850px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir Next;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 37px;
+    color: rgba(255,255,255,1);
 }
+
+
