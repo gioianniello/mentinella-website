@@ -1,11 +1,12 @@
+
 .mediaViewInfo {
-	--web-view-name: Mentinella HOME;
-	--web-view-id: Mentinella_HOME;
+	--web-view-name: Mentinella Studio;
+	--web-view-id: Mentinella_Studio;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 :root {
-	--web-view-ids: Mentinella_HOME;
+	--web-view-ids: Mentinella_Studio;
 }
 * {
 	margin: 0;
@@ -13,24 +14,24 @@
 	box-sizing: border-box;
 	border: none;
 }
-#Mentinella_HOME {
+#Mentinella_Studio {
 	position: absolute;
-	max-width: 100%; 1366px;
-	height: auto; 1536px;
+	width: 1920px;
+	height: 2031px;
 	background-color: rgba(0,0,0,1);
 	overflow: hidden;
-	--web-view-name: Mentinella HOME;
-	--web-view-id: Mentinella_HOME;
+	--web-view-name: Mentinella Studio;
+	--web-view-id: Mentinella_Studio;
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
 #aaa {
 	border: 0;
-	 507px;
-	 265px;
+	left: 1725px;
+	top: 386px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 353px;
+	width: 353px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
@@ -41,41 +42,41 @@
 }
 #aab {
 	border: 0;
-	 139px;
-	 489px;
+	left: 1816px;
+	top: 875px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 203px;
+	width: 77px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: 20px;
 	color: rgba(255,255,255,1);
 }
 #aac {
 	border: 0;
-	 140px;
-	 547px;
+	left: 1726px;
+	top: 848px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 513px;
+	width: 55px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 50px;
+	font-size: 20px;
 	color: rgba(255,255,255,1);
 }
 #aad {
 	border: 0;
-	 139px;
-	 605px;
+	left: 140px;
+	top: 759px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 353px;
+	width: 203px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
@@ -86,11 +87,11 @@
 }
 #aae {
 	border: 0;
-	 139px;
-	 663px;
+	left: 1379px;
+	top: 817px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 500px;
+	width: 513px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
@@ -101,41 +102,41 @@
 }
 #aaf {
 	border: 0;
-	 1211px;
-	 615px;
+	left: 176px;
+	top: 875px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 77px;
+	width: 353px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 50px;
 	color: rgba(255,255,255,1);
 }
 #aag {
 	border: 0;
-	 1233px;
-	 588px;
+	left: 363px;
+	top: 933px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 55px;
+	width: 500px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 50px;
 	color: rgba(255,255,255,1);
 }
 #aah {
 	border: 0;
-	 648px;
-	 870px;
+	left: 1912px;
+	top: 1257px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 71px;
+	width: 71px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Avenir Next;
@@ -146,11 +147,11 @@
 }
 #aai {
 	border: 0;
-	 139px;
-	 972px;
+	left: 696px;
+	top: 1375px;
 	position: absolute;
 	overflow: visible;
-	max-width: 100%; 850px;
+	width: 850px;
 	white-space: nowrap;
 	text-align: left;
 	font-family: Avenir Next;
@@ -158,4 +159,9 @@
 	font-weight: normal;
 	font-size: 37px;
 	color: rgba(255,255,255,1);
+}
+
+/** user defined rule set */
+.class1 {
+  background-color: lightgray;
 }
