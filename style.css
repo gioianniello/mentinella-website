@@ -1,4 +1,3 @@
-
 .mediaViewInfo {
 	--web-view-name: Mentinella HOME;
 	--web-view-id: Mentinella_HOME;
@@ -25,17 +24,138 @@
 	--web-scale-on-resize: true;
 	--web-enable-deep-linking: true;
 }
-#aaa, #aab, #aac, #aad, #aae, #aaf, #aag, #aah, #aai {
-    font-size: calc(16px + 0.5vw); /* Dynamic font size */
-    position: relative;
-    margin: 10px 0;
-    text-align: center;
+#aaa {
+	border: 0;
+	left: 507px;
+	top: 265px;
+	position: absolute;
+	overflow: visible;
+	width: 353px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
 }
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    #aaa, #aab, #aac, #aad, #aae, #aaf, #aag, #aah, #aai {
-        font-size: calc(14px + 1vw);
-        text-align: center;
-    }
+#aab {
+	border: 0;
+	left: 139px;
+	top: 489px;
+	position: absolute;
+	overflow: visible;
+	width: 203px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#aac {
+	border: 0;
+	left: 140px;
+	top: 547px;
+	position: absolute;
+	overflow: visible;
+	width: 513px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#aad {
+	border: 0;
+	left: 139px;
+	top: 605px;
+	position: absolute;
+	overflow: visible;
+	width: 353px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#aae {
+	border: 0;
+	left: 139px;
+	top: 663px;
+	position: absolute;
+	overflow: visible;
+	width: 500px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#aaf {
+	border: 0;
+	left: 1211px;
+	top: 615px;
+	position: absolute;
+	overflow: visible;
+	width: 77px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#aag {
+	border: 0;
+	left: 1233px;
+	top: 588px;
+	position: absolute;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#aah {
+	border: 0;
+	left: 648px;
+	top: 870px;
+	position: absolute;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#aai {
+	border: 0;
+	left: 139px;
+	top: 972px;
+	position: absolute;
+	overflow: visible;
+	width: 850px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Avenir Next;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 37px;
+	color: rgba(255,255,255,1);
 }
