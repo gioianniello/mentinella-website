@@ -1,13 +1,11 @@
 .mediaViewInfo {
-	--web-view-name: Mentinella Studio;
-	--web-view-id: Mentinella_Studio;
+	--web-view-name: iPad – 1;
+	--web-view-id: iPad__1;
 	--web-scale-on-resize: true;
-	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
-	--web-page-font: Arial;
 }
 :root {
-	--web-view-ids: Mentinella_Studio;
+	--web-view-ids: iPad__1;
 }
 * {
 	margin: 0;
@@ -15,60 +13,27 @@
 	box-sizing: border-box;
 	border: none;
 }
-#Mentinella_Studio {
+#iPad__1 {
 	position: absolute;
-	width: 1920px;
-	height: 2031px;
-	font-family: Arial;
+	width: 1595px;
+	height: 1025px;
 	background-color: rgba(0,0,0,1);
 	overflow: hidden;
-	--web-view-name: Mentinella Studio;
-	--web-view-id: Mentinella_Studio;
+	--web-view-name: iPad – 1;
+	--web-view-id: iPad__1;
 	--web-scale-on-resize: true;
-	--web-center-horizontally: true;
 	--web-enable-deep-linking: true;
-	--web-page-font: Arial;
 }
-#aaa {
+#aac {
 	border: 0;
-	left: 784px;
-	top: 386px;
+	left: 622px;
+	top: 412px;
 	position: absolute;
 	overflow: visible;
 	width: 353px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Avenir Next, Arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
-}
-#aab {
-	border: 0;
-	left: 1704px;
-	top: 875px;
-	position: absolute;
-	overflow: visible;
-	width: 77px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next, Arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
-}
-#aac {
-	border: 0;
-	left: 1726px;
-	top: 848px;
-	position: absolute;
-	overflow: visible;
-	width: 55px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next, Arial;
+	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 20px;
@@ -76,14 +41,14 @@
 }
 #aad {
 	border: 0;
-	left: 140px;
-	top: 759px;
+	left: 95px;
+	top: 660px;
 	position: absolute;
 	overflow: visible;
 	width: 203px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Avenir Next, Arial;
+	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
@@ -91,14 +56,14 @@
 }
 #aae {
 	border: 0;
-	left: 141px;
-	top: 817px;
+	left: 96px;
+	top: 718px;
 	position: absolute;
 	overflow: visible;
 	width: 513px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Avenir Next, Arial;
+	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
@@ -106,14 +71,14 @@
 }
 #aaf {
 	border: 0;
-	left: 140px;
-	top: 875px;
+	left: 95px;
+	top: 776px;
 	position: absolute;
 	overflow: visible;
 	width: 353px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Avenir Next, Arial;
+	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
@@ -121,46 +86,16 @@
 }
 #aag {
 	border: 0;
-	left: 140px;
-	top: 933px;
+	left: 95px;
+	top: 834px;
 	position: absolute;
 	overflow: visible;
 	width: 500px;
 	white-space: nowrap;
 	text-align: center;
-	font-family: Avenir Next, Arial;
+	font-family: Avenir Next;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 50px;
-	color: rgba(255,255,255,1);
-}
-#aah {
-	border: 0;
-	left: 925px;
-	top: 1257px;
-	position: absolute;
-	overflow: visible;
-	width: 71px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next, Arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
-}
-#aai {
-	border: 0;
-	left: 140px;
-	top: 1375px;
-	position: absolute;
-	overflow: visible;
-	width: 850px;
-	white-space: nowrap;
-	text-align: left;
-	font-family: Avenir Next, Arial;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 37px;
 	color: rgba(255,255,255,1);
 }
