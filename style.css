@@ -1,101 +1,47 @@
-.mediaViewInfo {
-	--web-view-name: iPad – 1;
-	--web-view-id: iPad__1;
-	--web-scale-on-resize: true;
-	--web-enable-deep-linking: true;
-}
-:root {
-	--web-view-ids: iPad__1;
-}
+
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#iPad__1 {
-	position: absolute;
-	width: 1595px;
-	height: 1025px;
-	background-color: rgba(0,0,0,1);
-	overflow: hidden;
-	--web-view-name: iPad – 1;
-	--web-view-id: iPad__1;
-	--web-scale-on-resize: true;
-	--web-enable-deep-linking: true;
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Avenir Next", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
 }
-#aac {
-	border: 0;
-	left: 622px;
-	top: 412px;
-	position: absolute;
-	overflow: visible;
-	width: 353px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(255,255,255,1);
+
+.container {
+    text-align: center;
+    max-width: 100%;
 }
-#aad {
-	border: 0;
-	left: 95px;
-	top: 660px;
-	position: absolute;
-	overflow: visible;
-	width: 203px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+
+.logo {
+    font-size: 8vw;
+    letter-spacing: 0.1em;
 }
-#aae {
-	border: 0;
-	left: 96px;
-	top: 718px;
-	position: absolute;
-	overflow: visible;
-	width: 513px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+
+.logo strong {
+    font-weight: bold;
 }
-#aaf {
-	border: 0;
-	left: 95px;
-	top: 776px;
-	position: absolute;
-	overflow: visible;
-	width: 353px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+
+.menu p {
+    font-size: 5vw;
+    margin: 2vw 0;
+    white-space: nowrap;
 }
-#aag {
-	border: 0;
-	left: 95px;
-	top: 834px;
-	position: absolute;
-	overflow: visible;
-	width: 500px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Avenir Next;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 50px;
-	color: rgba(255,255,255,1);
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+
+    .menu p {
+        font-size: 2rem;
+    }
 }
