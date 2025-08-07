@@ -1,47 +1,281 @@
+/* RESPONSIVE CSS LAYER - Added on top of original design */
 
+/* Mobile First Responsive Overrides */
+@media (max-width: 768px) {
+    #Mentinella_Studio {
+        width: 100vw !important;
+        height: auto !important;
+        min-height: 100vh;
+        position: relative !important;
+        padding: 20px;
+    }
+    
+    #aaa {
+        position: static !important;
+        width: 100% !important;
+        margin: 40px 0 60px 0;
+        font-size: 16px !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    
+    #aab, #aac {
+        position: static !important;
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0 20px 40px 0;
+        font-size: 16px !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    
+    #aad, #aae, #aaf, #aag {
+        position: static !important;
+        width: 100% !important;
+        margin: 20px 0;
+        font-size: 24px !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    
+    #aah {
+        position: static !important;
+        width: 100% !important;
+        margin: 60px 0 30px 0;
+        font-size: 18px !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    
+    #aai {
+        position: static !important;
+        width: 100% !important;
+        white-space: normal !important;
+        font-size: 16px !important;
+        line-height: 1.6;
+        left: auto !important;
+        top: auto !important;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1200px) {
+    #Mentinella_Studio {
+        transform-origin: top left;
+        transform: scale(0.7);
+        width: 1920px;
+        height: 2031px;
+    }
+    
+    body {
+        width: calc(1920px * 0.7);
+        height: calc(2031px * 0.7);
+        overflow-x: auto;
+    }
+}
+
+/* Desktop Responsive */
+@media (min-width: 1201px) and (max-width: 1919px) {
+    #Mentinella_Studio {
+        transform-origin: top left;
+        transform: scale(calc(100vw / 1920));
+    }
+}
+
+/* Large Desktop - Original Size */
+@media (min-width: 1920px) {
+    #Mentinella_Studio {
+        transform: none;
+    }
+}
+
+.mediaViewInfo {
+    --web-view-name: Mentinella Studio;
+    --web-view-id: Mentinella_Studio;
+    --web-scale-on-resize: true;
+    --web-center-horizontally: true;
+    --web-enable-deep-linking: true;
+    --web-page-font: Arial;
+}
+:root {
+    --web-view-ids: Mentinella_Studio;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: "Avenir Next", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
 }
 
-.container {
-    text-align: center;
-    max-width: 100%;
+#Mentinella_Studio {
+    position: absolute;
+    width: 1920px;
+    height: 2031px;
+    font-family: Arial;
+    background-color: rgba(0,0,0,1);
+    overflow: hidden;
+    --web-view-name: Mentinella Studio;
+    --web-view-id: Mentinella_Studio;
+    --web-scale-on-resize: true;
+    --web-center-horizontally: true;
+    --web-enable-deep-linking: true;
+    --web-page-font: Arial;
 }
-
-.logo {
-    font-size: 8vw;
-    letter-spacing: 0.1em;
-}
-
-.logo strong {
-    font-weight: bold;
-}
-
-.menu p {
-    font-size: 5vw;
-    margin: 2vw 0;
+#aaa {
+    border: 0;
+    left: 780px;
+    top: 387px;
+    position: absolute;
+    overflow: visible;
+    width: 361px;
     white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+}
+#aab {
+    border: 0;
+    left: 196px;
+    top: 142px;
+    position: absolute;
+    overflow: visible;
+    width: 83px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aac {
+    border: 0;
+    left: 221px;
+    top: 115px;
+    position: absolute;
+    overflow: visible;
+    width: 55px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aad {
+    border: 0;
+    left: 1621px;
+    top: 701px;
+    position: absolute;
+    overflow: visible;
+    width: 185px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aae {
+    border: 0;
+    left: 1295px;
+    top: 761px;
+    position: absolute;
+    overflow: visible;
+    width: 511px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aaf {
+    border: 0;
+    left: 1449px;
+    top: 821px;
+    position: absolute;
+    overflow: visible;
+    width: 357px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aag {
+    border: 0;
+    left: 1317px;
+    top: 881px;
+    position: absolute;
+    overflow: visible;
+    width: 489px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    color: rgba(255,255,255,1);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+#aah {
+    border: 0;
+    left: 925px;
+    top: 1258px;
+    position: absolute;
+    overflow: visible;
+    width: 71px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+}
+#aai {
+    border: 0;
+    left: 545px;
+    top: 1409px;
+    position: absolute;
+    overflow: visible;
+    width: 831px;
+    white-space: nowrap;
+    text-align: center;
+    font-family: Inter, Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 37px;
+    color: rgba(255,255,255,1);
 }
 
-@media (min-width: 768px) {
-    .logo {
-        font-size: 3rem;
-    }
-
-    .menu p {
-        font-size: 2rem;
-    }
+/* Hover effects */
+#aab:hover, #aac:hover, #aad:hover, #aae:hover, #aaf:hover, #aag:hover {
+    opacity: 0.7;
 }
