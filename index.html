@@ -1,260 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentinella Studio</title>
-    <style>
-        .mediaViewInfo {
-            --web-view-name: Mentinella Studio;
-            --web-view-id: Mentinella_Studio;
-            --web-scale-on-resize: true;
-            --web-center-horizontally: true;
-            --web-enable-deep-linking: true;
-            --web-page-font: Arial;
-        }
-        :root {
-            --web-view-ids: Mentinella_Studio;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            border: none;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            overflow-x: auto;
-        }
-        
-        #Mentinella_Studio {
-            position: absolute;
-            width: 1920px;
-            height: 2031px;
-            font-family: Arial;
-            background-color: rgba(0,0,0,1);
-            overflow: hidden;
-            --web-view-name: Mentinella Studio;
-            --web-view-id: Mentinella_Studio;
-            --web-scale-on-resize: true;
-            --web-center-horizontally: true;
-            --web-enable-deep-linking: true;
-            --web-page-font: Arial;
-        }
-        #aaa {
-            border: 0;
-            left: 780px;
-            top: 387px;
-            position: absolute;
-            overflow: visible;
-            width: 361px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            color: rgba(255,255,255,1);
-        }
-        #aab {
-            border: 0;
-            left: 196px;
-            top: 142px;
-            position: absolute;
-            overflow: visible;
-            width: 83px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aac {
-            border: 0;
-            left: 221px;
-            top: 115px;
-            position: absolute;
-            overflow: visible;
-            width: 55px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aad {
-            border: 0;
-            left: 1621px;
-            top: 701px;
-            position: absolute;
-            overflow: visible;
-            width: 185px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 50px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aae {
-            border: 0;
-            left: 1295px;
-            top: 761px;
-            position: absolute;
-            overflow: visible;
-            width: 511px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 50px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aaf {
-            border: 0;
-            left: 1449px;
-            top: 821px;
-            position: absolute;
-            overflow: visible;
-            width: 357px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 50px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aag {
-            border: 0;
-            left: 1317px;
-            top: 881px;
-            position: absolute;
-            overflow: visible;
-            width: 489px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 50px;
-            color: rgba(255,255,255,1);
-            cursor: pointer;
-            transition: opacity 0.3s ease;
-        }
-        #aah {
-            border: 0;
-            left: 925px;
-            top: 1258px;
-            position: absolute;
-            overflow: visible;
-            width: 71px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            color: rgba(255,255,255,1);
-        }
-        #aai {
-            border: 0;
-            left: 545px;
-            top: 1409px;
-            position: absolute;
-            overflow: visible;
-            width: 831px;
-            white-space: nowrap;
-            text-align: center;
-            font-family: Inter, Arial;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 37px;
-            color: rgba(255,255,255,1);
-        }
-        
-        /* Hover effects */
-        #aab:hover, #aac:hover, #aad:hover, #aae:hover, #aaf:hover, #aag:hover {
-            opacity: 0.7;
-        }
-        
-        /* Responsive scaling for smaller screens */
-        @media (max-width: 1920px) {
-            #Mentinella_Studio {
-                transform-origin: top left;
-                transform: scale(calc(100vw / 1920));
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentinella Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="Mentinella_Studio">
-        <div id="aaa">
-            <span>M  E  N  T  I  N  E  L  L  A   </span><span style="font-style:normal;font-weight:bold;">S  T  U  D  I  O</span>
-        </div>
-        <div id="aab">
-            <span>contacts</span>
-        </div>
-        <div id="aac">
-            <span>about</span>
-        </div>
-        <div id="aad">
-            <span>/AT 7AM</span>
-        </div>
-        <div id="aae">
-            <span>/CRISPY JAZZ BACON</span>
-        </div>
-        <div id="aaf">
-            <span>/LES TURBINES</span>
-        </div>
-        <div id="aag">
-            <span>/MENTINELLA CAFFE</span>
-        </div>
-        <div id="aah">
-            <span>ABOUT</span>
-        </div>
-        <div id="aai">
-            <span>From creative communication to tech solutions, <br/>and the timeless essence of </span><span style="font-style:normal;font-weight:normal;">Italian traditions</span><span>.<br/></span><br/><span style="font-style:normal;font-weight:normal;font-size:25px;">Mentinella Studio embraces a 360-degree approach to <br/>the needs and languages of the contemporary world.</span><br/><span style="font-size:30px;"><br/>From fashion to food and beyond, our projects aim to elevate <br/>human creativity and celebrate the beauty of conscious living.<br/><br/>Prioritizing quality and meaningful connections.</span>
-        </div>
-    </div>
-
-    <script>
-        // Add click functionality to navigation and project links
-        document.getElementById('aab').addEventListener('click', function() {
-            alert('Contact information would be displayed here');
-        });
-
-        document.getElementById('aac').addEventListener('click', function() {
-            document.getElementById('aah').scrollIntoView({ behavior: 'smooth' });
-        });
-
-        // Project links
-        const projectLinks = ['aad', 'aae', 'aaf', 'aag'];
-        projectLinks.forEach(id => {
-            document.getElementById(id).addEventListener('click', function() {
-                const projectName = this.textContent.replace('/', '');
-                alert(`${projectName} project details would be displayed here`);
-            });
-        });
-    </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b9ac5b11bab756',t:'MTc1NDYwMDEwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <header class="site-header">
+    <a href="#about" class="nav-link">about</a>
+    <a href="#contacts" class="nav-link">contacts</a>
+  </header>
+  <main class="site-main">
+    <h1 class="wordmark">M&nbsp;E&nbsp;N&nbsp;T&nbsp;I&nbsp;N&nbsp;E&nbsp;L&nbsp;L&nbsp;A&nbsp;&nbsp;S&nbsp;T&nbsp;U&nbsp;D&nbsp;I&nbsp;O</h1>
+    <section class="sections">
+      <div class="about" id="about">
+        <h2>ABOUT</h2>
+        <p>From creative communication to tech solutions, and the timeless essence of Italian traditions.</p>
+        <p>Mentinella Studio embraces a 360-degree approach to the needs and languages of the contemporary world.</p>
+        <p>From fashion to food and beyond, our projects aim to elevate human creativity and celebrate the beauty of conscious living. Prioritizing quality and meaningful connections.</p>
+      </div>
+      <aside class="projects">
+        <h2>PROJECTS</h2>
+        <a href="#" class="project-link">/AT 7AM</a>
+        <a href="#" class="project-link">/CRISPY JAZZ BACON</a>
+        <a href="#" class="project-link">/LES TURBINES</a>
+        <a href="#" class="project-link">/MENTINELLA CAFFE</a>
+      </aside>
+    </section>
+  </main>
+  <footer id="contacts" class="site-footer">
+    © <span id="year"></span> Mentinella Studio — All rights reserved
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
