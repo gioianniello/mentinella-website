@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentinella Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="mentinella.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header" aria-label="Navigazione principale">
+      <nav class="nav">
+        <a class="nav-link" href="#contacts">contacts</a>
+        <a class="nav-link" href="#about">about</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      <section class="hero" aria-label="Wordmark">
+        <h1 class="wordmark" aria-label="Mentinella Studio">
+          <span>M&nbsp;E&nbsp;N&nbsp;T&nbsp;I&nbsp;N&nbsp;E&nbsp;L&nbsp;L&nbsp;A</span>
+          <span class="spacer"></span>
+          <span>S&nbsp;T&nbsp;U&nbsp;D&nbsp;I&nbsp;O</span>
+        </h1>
+      </section>
+
+      <section class="content">
+        <div class="about" id="about">
+          <h2 class="eyebrow">ABOUT</h2>
+          <p>From creative communication to tech solutions, and the timeless essence of Italian traditions.</p>
+          <p>Mentinella Studio embraces a 360-degree approach to the needs and languages of the contemporary world.</p>
+          <p>From fashion to food and beyond, our projects aim to elevate human creativity and celebrate the beauty of conscious living. Prioritizing quality and meaningful connections.</p>
+        </div>
+
+        <aside class="projects" aria-label="Projects">
+          <h3 class="eyebrow small">PROJECTS</h3>
+          <ul class="project-list">
+            <li><a href="#" class="project">/AT 7AM</a></li>
+            <li><a href="#" class="project">/CRISPY JAZZ BACON</a></li>
+            <li><a href="#" class="project">/LES TURBINES</a></li>
+            <li><a href="#" class="project">/MENTINELLA CAFFE</a></li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <footer id="contacts" class="site-footer">
+      © <span id="year"></span> Mentinella Studio — All rights reserved
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
