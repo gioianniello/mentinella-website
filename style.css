@@ -1,126 +1,168 @@
-/* Mentinella — CSS‑only responsive override (no HTML changes needed)
-   Usage: replace your current style.css with this file OR include it after it.
-   Note: true mobile responsiveness also needs the viewport meta in HTML:
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-*/
-
-/* 1) Font (optional but recommended) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-/* 2) Reset & theme */
-*,*::before,*::after{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;background:#000;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
-
-/* Links */
-a{color:#fff;text-decoration:none;transition:opacity .2s ease}
-a:hover{opacity:.72}
-a:focus-visible{outline:2px dashed #fff;outline-offset:4px}
-
-/* Fluid type scale */
-:root{
-  --container: 1200px;
-  --step--1: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
-  --step-0: clamp(1rem, 0.96rem + 0.5vw, 1.25rem);
-  --step-1: clamp(1.5rem, 1.25rem + 1.2vw, 2rem);
-  --step-2: clamp(2rem, 1.7rem + 2.2vw, 3rem);
-  --step-3: clamp(3rem, 2.5rem + 3.5vw, 4.5rem);
+.mediaViewInfo {
+	--web-view-name: Mentinella Studio;
+	--web-view-id: Mentinella_Studio;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-show-navigation-controls: true;
+	--web-enable-deep-linking: true;
+	--web-page-font: Arial;
 }
-
-/* 3) Target the XD root artboard and nuke absolute positioning */
-#Mentinella_Studio{
-  position:static !important;
-  width:auto !important; height:auto !important;
-  max-width:var(--container); margin:0 auto;
-  padding:16px 20px 40px;
-  overflow:visible !important;
-  display:flex; flex-direction:column; gap:24px; /* mobile-first natural flow */
-  background:#000;
+:root {
+	--web-view-ids: Mentinella_Studio;
 }
-
-/* Remove all absolute layout + transforms from children */
-#Mentinella_Studio *{
-  position:static !important;
-  width:auto !important; height:auto !important;
-  left:auto !important; top:auto !important; right:auto !important; bottom:auto !important;
-  transform:none !important;
-  white-space:normal !important;
-  text-align:left;
-  max-width:unset !important;
-  /* Remove pointer-blocking transparent overlays from XD if any */
-  pointer-events:auto !important;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
 }
-
-/* 4) Top nav: IDs from XD (adjust if your file uses different ones) */
-#aac, /* about */
-#aab  /* contacts */{
-  display:inline-block; font-size:var(--step-0); opacity:.92; cursor:pointer;
-  margin-right:20px;
+#Mentinella_Studio {
+	position: absolute;
+	width: 1959px;
+	height: 2031px;
+	font-family: Arial;
+	background-color: rgba(0,0,0,1);
+	overflow: hidden;
+	--web-view-name: Mentinella Studio;
+	--web-view-id: Mentinella_Studio;
+	--web-scale-on-resize: true;
+	--web-center-horizontally: true;
+	--web-show-navigation-controls: true;
+	--web-enable-deep-linking: true;
+	--web-page-font: Arial;
 }
-
-/* 5) Wordmark (M E N T I N E L L A  S T U D I O) */
-#aaa{
-  text-align:center; font-weight:700; font-size:var(--step-3);
-  letter-spacing:.35em; text-indent:.35em; /* avoid leading optical gap */
-  margin: 8px 0 16px;
+#aaa {
+	border: 0;
+	left: 780px;
+	top: 387px;
+	position: absolute;
+	overflow: visible;
+	width: 361px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
 }
-/* If XD placed the word in nested spans, enforce bold */
-#aaa *{font-weight:700 !important}
-
-/* 6) Section headings and text */
-#aah{ /* ABOUT label */
-  font-size:var(--step-0); font-weight:600; opacity:.7; letter-spacing:.08em;
-  margin-top:8px;
+#aab {
+	border: 0;
+	left: 196px;
+	top: 142px;
+	position: absolute;
+	overflow: visible;
+	width: 83px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
 }
-#aai{ /* ABOUT paragraphs container */
-  font-size:var(--step-1); line-height:1.55; max-width:70ch;
-  display:grid; gap:.75rem;
+#aac {
+	border: 0;
+	left: 221px;
+	top: 115px;
+	position: absolute;
+	overflow: visible;
+	width: 55px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
 }
-
-/* 7) Projects list (IDs for each row) */
-#aad,#aae,#aaf,#aag{
-  display:block; font-size:var(--step-1);
-  padding:10px 0; border-bottom:1px solid rgba(255,255,255,.1);
+#aad {
+	border: 0;
+	left: 1621px;
+	top: 701px;
+	position: absolute;
+	overflow: visible;
+	width: 185px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
 }
-
-/* 8) Responsive layout:
-   Mobile: linear flow (nav → wordmark → about → projects)
-   ≥900px: grid with center content + right projects column
-*/
-@media (min-width: 900px){
-  #Mentinella_Studio{
-    display:grid; gap:56px 24px;
-    grid-template-columns: 1fr minmax(0, 620px) minmax(220px, 360px);
-    align-items:start;
-  }
-
-  /* Make the two nav links share the top full row */
-  #aac, #aab{ grid-column:1 / -1; }
-
-  /* Center the wordmark across the full width */
-  #aaa{ grid-column:1 / -1 }
-
-  /* ABOUT (label + text) in the middle column */
-  #aah, #aai{ grid-column:2 }
-
-  /* Projects list on the right column */
-  #aad, #aae, #aaf, #aag{ grid-column:3 }
+#aae {
+	border: 0;
+	left: 1295px;
+	top: 761px;
+	position: absolute;
+	overflow: visible;
+	width: 511px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
 }
-
-@media (min-width: 1200px){
-  #aaa{ letter-spacing:.4em }
+#aaf {
+	border: 0;
+	left: 1449px;
+	top: 821px;
+	position: absolute;
+	overflow: visible;
+	width: 357px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
 }
-
-/* 9) Utility: if XD exported large empty frames, hide them */
-#Mentinella_Studio [role="presentation"], 
-#Mentinella_Studio [aria-hidden="true"]{
-  display:unset; /* don’t hide real content */
+#aag {
+	border: 0;
+	left: 1317px;
+	top: 881px;
+	position: absolute;
+	overflow: visible;
+	width: 489px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
 }
-/* If you spot obviously empty decorative boxes from XD, uncomment:
-#someEmptyFrameId{ display:none !important }
-*/
-
-/* 10) Optional: sticky header feeling if your two nav links live at top */
-@supports (backdrop-filter: blur(2px)){
-  /* apply a subtle backdrop if a top bar container exists */
+#aah {
+	border: 0;
+	left: 925px;
+	top: 1258px;
+	position: absolute;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#aai {
+	border: 0;
+	left: 545px;
+	top: 1409px;
+	position: absolute;
+	overflow: visible;
+	width: 831px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Inter, Arial;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 37px;
+	color: rgba(255,255,255,1);
 }
