@@ -4,64 +4,110 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentinella Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Pagina & font */
+    html,body{height:100%}
+    body{margin:0;background:#000;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}
+    a{color:#fff;text-decoration:none}
+
+    /* Navbar fissa in alto-sx */
+    .fixed-nav{position:fixed;top:12px;left:16px;z-index:10}
+    .fixed-nav a{margin-right:18px;font-weight:500;font-size:20px}
+
+    /* Canvas SVG responsive che mantiene posizioni 1:1 */
+    .hero-svg{display:block;width:100%;height:auto}
+
+    /* Sezione ABOUT (ancora) */
+    .about-wrap{max-width:880px;margin:40px auto 80px;padding:0 16px}
+    .about-eyebrow{font-weight:500;opacity:.75;letter-spacing:.12em;margin-bottom:8px}
+    .about-wrap p{font-size:22px;margin:.6rem 0}
+    .about-wrap em{font-style:italic}
+
+    /* Effetto shrink sui link di destra dentro la SVG (via JS: class .shrink) */
+    .shrink #proj text{font-size:28px !important}
+  </style>
 </head>
 <body>
-  <!-- Nav fissa in alto a sinistra -->
-  <header class="site-header" aria-label="Navigazione">
-    <nav>
-      <a class="nav-link" href="#about">about</a>
-      <a class="nav-link" href="#contacts">contacts</a>
-    </nav>
-  </header>
+  <!-- Nav fissa (non scorre) -->
+  <div class="fixed-nav">
+    <a href="#about">about</a>
+    <a href="#contacts">contacts</a>
+  </div>
 
-  <main>
-    <!-- Wordmark centrale -->
-    <section class="hero" aria-label="Wordmark">
-      <h1 class="wordmark">
-        <span>M&nbsp;E&nbsp;N&nbsp;T&nbsp;I&nbsp;N&nbsp;E&nbsp;L&nbsp;L&nbsp;A</span>
-        <span class="spacer"></span>
-        <strong>S&nbsp;T&nbsp;U&nbsp;D&nbsp;I&nbsp;O</strong>
-      </h1>
-    </section>
+  <!-- TAVOLA PRINCIPALE come SVG: posizioni identiche, scala perfetta -->
+  <svg class="hero-svg" viewBox="0 0 1959 2031" aria-label="Mentinella Studio">
+    <!-- Wordmark (centrato secondo tavola) -->
+    <text x="980" y="420" text-anchor="middle" fill="#fff" font-size="84" font-family="Inter" font-weight="500" letter-spacing=".35em">
+      M  E  N  T  I  N  E  L  L  A
+    </text>
+    <text x="980" y="540" text-anchor="middle" fill="#fff" font-size="84" font-family="Inter" font-weight="700" letter-spacing=".35em">
+      S  T  U  D  I  O
+    </text>
 
-    <!-- Griglia principale -->
-    <section class="content">
-      <!-- Testo ABOUT -->
-      <div class="about" id="about">
-        <div class="eyebrow">ABOUT</div>
+    <!-- Links laterali a destra: /AT 7AM, ecc. (cliccabili) -->
+    <g id="proj" font-family="Inter" font-weight="500" fill="#fff">
+      <a xlink:href="#at7am"><text x="1621" y="748" font-size="50" text-anchor="middle">/AT 7AM</text></a>
+      <a xlink:href="#crispy"><text x="1550" y="808" font-size="50" text-anchor="middle">/CRISPY JAZZ BACON</text></a>
+      <a xlink:href="#turbines"><text x="1620" y="868" font-size="50" text-anchor="middle">/LES TURBINES</text></a>
+      <a xlink:href="#caffe"><text x="1605" y="928" font-size="50" text-anchor="middle">/MENTINELLA CAFFE</text></a>
+      <!-- sottili linee divisori come nel mockup -->
+      <line x1="1260" y1="770" x2="1900" y2="770" stroke="rgba(255,255,255,.18)"/>
+      <line x1="1260" y1="830" x2="1900" y2="830" stroke="rgba(255,255,255,.12)"/>
+      <line x1="1260" y1="890" x2="1900" y2="890" stroke="rgba(255,255,255,.12)"/>
+      <line x1="1260" y1="950" x2="1900" y2="950" stroke="rgba(255,255,255,.12)"/>
+    </g>
 
-        <p class="p-xl">From creative communication to tech solutions,</p>
-        <p class="p-xl">and the timeless essence of <em>Italian traditions</em>.</p>
+    <!-- “ABOUT” label nella posizione del PDF -->
+    <text x="980" y="1258" text-anchor="middle" fill="#fff" font-size="20" font-family="Inter" font-weight="500" letter-spacing=".12em">
+      ABOUT
+    </text>
 
-        <p class="p-md">Mentinella Studio embraces a 360-degree approach to<br>
-          the needs and languages of the contemporary world.</p>
+    <!-- (Opzionale) un piccolo indicatore per scroll -->
+    <!-- <text x="980" y="1150" text-anchor="middle" fill="#fff" font-size="14" opacity=".5">scroll</text> -->
+  </svg>
 
-        <p class="p-lg">From fashion to food and beyond, our projects aim to elevate<br>
-          human creativity and celebrate the beauty of conscious living.</p>
+  <!-- Sezione ABOUT (ancora di destinazione) -->
+  <section id="about" class="about-wrap" aria-label="About">
+    <div class="about-eyebrow">ABOUT</div>
 
-        <p class="p-lg">Prioritizing quality and meaningful connections.</p>
-      </div>
+    <p style="font-size:37px">From creative communication to tech solutions,</p>
+    <p style="font-size:37px">and the timeless essence of <em>Italian traditions</em>.</p>
 
-      <!-- Lista progetti a destra -->
-      <aside class="projects" aria-label="Projects">
-        <ul class="project-list">
-          <li><a href="#" class="project">/AT 7AM</a></li>
-          <li><a href="#" class="project">/CRISPY JAZZ BACON</a></li>
-          <li><a href="#" class="project">/LES TURBINES</a></li>
-          <li><a href="#" class="project">/MENTINELLA CAFFE</a></li>
-        </ul>
-      </aside>
-    </section>
-  </main>
+    <p style="font-size:25px"><em>Mentinella Studio</em> embraces a 360-degree approach to<br>
+      the needs and languages of the contemporary world.</p>
 
-  <footer id="contacts" class="site-footer">
+    <p style="font-size:30px">From fashion to food and beyond, our projects aim to elevate<br>
+      human creativity and celebrate the beauty of conscious living.</p>
+
+    <p style="font-size:30px">Prioritizing quality and meaningful connections.</p>
+  </section>
+
+  <footer id="contacts" style="opacity:.7;text-align:center;padding:32px 16px;font-size:14px">
     © <span id="year"></span> Mentinella Studio — All rights reserved
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+    // Anno footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Effetto: rimpicciolisci i link di destra mentre si scorre (mantieni posizioni)
+    (function(){
+      const svg = document.querySelector('.hero-svg');
+      const projGroup = document.getElementById('proj');
+      if(!svg || !projGroup) return;
+
+      const heroHeightPx = 700; // circa: regola se vuoi la soglia più alta/bassa
+      function onScroll(){
+        if(window.scrollY > heroHeightPx){
+          projGroup.classList.add('shrink');
+        }else{
+          projGroup.classList.remove('shrink');
+        }
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, {passive:true});
+    })();
+  </script>
 </body>
 </html>
