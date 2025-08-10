@@ -4,40 +4,97 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentinella Studio</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
-    /* Pagina & font */
+    /* ===== Base ===== */
+    *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:#000;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.}
+    body{
+      margin:0;background:#000;color:#fff;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.45;
+    }
     a{color:#fff;text-decoration:none}
+    a:hover{opacity:.85}
+    a:focus-visible{outline:2px dashed #fff;outline-offset:4px}
 
-    /* Navbar fissa in alto-sx */
-    .fixed-nav{position:fixed;top:20px;left:20px;z-index:20}
-    .fixed-nav a{margin: right 20px;px;font-weight:300;font-size:15px}
+    /* ===== Header fisso, CENTRATO ===== */
+    .fixed-nav{
+      position:fixed; top:20px; left:50%; transform:translateX(-50%);
+      z-index:50; display:flex; gap:28px; align-items:center;
+      padding:6px 12px; background:linear-gradient(180deg,rgba(0,0,0,.85),rgba(0,0,0,0));
+      backdrop-filter:saturate(120%) blur(2px);
+    }
+    .fixed-nav a{font-weight:500;font-size:15px;letter-spacing:.04em}
 
-    /* Canvas SVG responsive che mantiene posizioni 1:1 */
+    /* ===== Canvas SVG (homepage) ===== */
     .hero-svg{display:block;width:100%;height:auto}
 
-    /* Sezione ABOUT (ancora) */
-    .about-wrap{max-width:880px;margin:40px auto 80px;padding:0 16px}
-    .about-eyebrow{font-weight:500;opacity:.75;letter-spacing:.12em;margin-bottom:8px}
-    .about-wrap p{font-size:22px;margin:.6rem 0}
-    .about-wrap em{font-style:italic}
+    /* ===== Pannelli fullscreen (ABOUT / CONTACTS) ===== */
+    .panel{
+      position:fixed; inset:0; z-index:40;
+      display:none; place-items:center; background:#000;
+      padding:24px 16px;
+    }
+    .panel.show{display:grid}
+    .panel-inner{max-width:900px; width:min(94vw, 900px); text-align:center}
+    .panel .eyebrow{font-weight:500; opacity:.75; letter-spacing:.12em; margin:0 0 12px; font-size:20px}
+    .panel .p-37{font-size:37px; margin:.35rem 0}
+    .panel .p-25{font-size:25px; margin:.9rem 0}
+    .panel .p-30{font-size:30px; margin:.9rem 0}
+    .panel em{font-style:italic}
+    .panel .close{
+      margin-top:22px; display:inline-block; font-size:14px; opacity:.75;
+      border:1px solid rgba(255,255,255,.25); padding:8px 14px; border-radius:8px;
+    }
+    .panel .close:hover{opacity:1}
 
-    /* Effetto shrink sui link di destra dentro la SVG (via JS: class .shrink) */
-    .shrink #proj text{font: size 30px;px !important}
+    /* ===== Form Contacts ===== */
+    .form{
+      text-align:left; margin:12px auto 0; width:min(94vw, 640px);
+      display:grid; gap:14px;
+    }
+    .row{display:grid; gap:12px}
+    @media (min-width:680px){
+      .row.two{grid-template-columns: 1fr 1fr}
+    }
+    label{font-size:13px; opacity:.8}
+    input[type="text"], input[type="email"], textarea{
+      width:100%; background:#0a0a0a; color:#fff; border:1px solid rgba(255,255,255,.2);
+      border-radius:10px; padding:12px 14px; font:inherit;
+    }
+    textarea{min-height:140px; resize:vertical}
+    .services{display:grid; gap:8px; grid-template-columns: 1fr}
+    @media (min-width:680px){ .services{grid-template-columns: 1fr 1fr} }
+    .service{display:flex; align-items:center; gap:10px; font-size:14px}
+    .actions{display:flex; gap:10px; justify-content:center; margin-top:8px}
+    .btn{
+      background:#fff; color:#000; border:0; padding:12px 18px; border-radius:10px;
+      font-weight:600; cursor:pointer;
+    }
+    .btn.secondary{background:transparent; color:#fff; border:1px solid rgba(255,255,255,.25)}
+
+    /* ===== Tipografia responsive leggera per pannelli su mobile ===== */
+    @media (max-width:540px){
+      .panel .p-37{font-size:30px}
+      .panel .p-25{font-size:22px}
+      .panel .p-30{font-size:24px}
+    }
   </style>
 </head>
 <body>
-  <!-- Nav fissa (non scorre) -->
+  <!-- NAV CENTRATA IN ALTO -->
   <div class="fixed-nav">
-    <a href="#about">ABOUT</a>
-    <a href="#contacts">CONTACTS</a>
+    <a href="#about" data-open="about">about</a>
+    <a href="#contacts" data-open="contacts">contacts</a>
   </div>
 
-  <!-- TAVOLA PRINCIPALE come SVG: posizioni identiche, scala perfetta -->
+  <!-- HOMEPAGE: SVG responsive che mantiene posizioni 1:1 -->
   <svg class="hero-svg" viewBox="0 0 1959 2031" aria-label="Mentinella Studio">
-    <!-- Wordmark (centrato secondo tavola) -->
+    <!-- Wordmark centrato (Inter 15–20, due righe) -->
     <text x="980" y="420" text-anchor="middle" fill="#fff" font-size="15" font-family="Inter" font-weight="400" letter-spacing=".35em">
       M  E  N  T  I  N  E  L  L  A
     </text>
@@ -45,39 +102,229 @@
       S  T  U  D  I  O
     </text>
 
-    <!-- Links laterali a destra: /AT 7AM, ecc. (cliccabili) -->
+       <!-- Links laterali a destra: /AT 7AM, ecc. (cliccabili) -->
     <g id="proj" font-family="Inter" font-weight="500" fill="#fff">
       <a xlink:href="#at7am"><text x="1465" y="748" font-size="40" text-anchor="middle">/AT 7AM</text></a>
       <a xlink:href="#crispy"><text x="1600" y="798" font-size="40" text-anchor="middle">/CRISPY JAZZ BACON</text></a>
       <a xlink:href="#turbines"><text x="1535" y="848" font-size="40" text-anchor="middle">/LES TURBINES</text></a>
       <a xlink:href="#caffe"><text x="1590" y="898" font-size="40" text-anchor="middle">/MENTINELLA CAFFE</text></a>
-      <!-- sottili linee divisori come nel mockup -->
     </g>
 
-    <!-- “ABOUT” label nella posizione del PDF -->
+    <!-- Etichetta ABOUT nella tavola (decorativa) -->
     <text x="980" y="1258" text-anchor="middle" fill="#fff" font-size="20" font-family="Inter" font-weight="500" letter-spacing=".12em">
-      ABOUT
     </text>
   </svg>
 
-  <!-- Sezione ABOUT -->
-  <section id="about" style="text-align:center;" class="about-wrap" aria-label="About">
-   
-    <p style="font-size:35px">From creative communication to tech solutions,</p>
-    <p style="font-size:35px">and the timeless essence of <em>Italian traditions</em>.</p>
+  <!-- PANEL ABOUT (schermata nera centrata) -->
+  <section id="panel-about" class="panel" aria-label="About">
+    <div class="panel-inner">
+      <div class="eyebrow"></div>
 
-    <p style="font-size:25px"><em>Mentinella Studio</em> embraces a 360-degree approach to<br>
-      the needs and languages of the contemporary world.</p>
+      <p class="p-37">From creative communication to tech solutions,</p>
+      <p class="p-37">and the timeless essence of <em>Italian traditions</em>.</p>
 
-    <p style="font-size:30px">From fashion to food and beyond, our projects aim to elevate<br>
-      human creativity and celebrate the beauty of conscious living.</p>
+      <p class="p-25"><em>Mentinella Studio</em> embraces a 360-degree approach to<br>
+        the needs and languages of the contemporary world.</p>
 
-    <p style="font-size:30px">Prioritizing quality and meaningful connections.</p>
+      <p class="p-30">From fashion to food and beyond, our projects aim to elevate<br>
+        human creativity and celebrate the beauty of conscious living.</p>
+
+      <p class="p-30">Prioritizing quality and meaningful connections.</p>
+
+      <a href="#" class="close" data-close>H O M E</a>
+    </div>
   </section>
+
+  <!-- PANEL CONTACTS (schermata nera centrata + form) -->
+  <section id="panel-contacts" class="panel" aria-label="Contacts">
+    <div class="panel-inner">
+      <div class="eyebrow">CONTACTS</div>
+
+      <form class="form" id="contactForm">
+        <div class="row two">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="surname">Surname</label>
+            <input id="surname" name="surname" type="text" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="message">Text</label>
+            <textarea id="message" name="message" placeholder="Write your message…" required></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>What service are you contacting for?</label>
+          <div class="services">
+            <label class="service"><input type="checkbox" name="services" value="/AT 7AM"> /AT 7AM</label>
+            <label class="service"><input type="checkbox" name="services" value="/CRISPY JAZZ BACON"> /CRISPY JAZZ BACON</label>
+            <label class="service"><input type="checkbox" name="services" value="/LES TURBINES"> /LES TURBINES</label>
+            <label class="service"><input type="checkbox" name="services" value="/MENTINELLA CAFFE"> /MENTINELLA CAFFE</label>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">S E N D</button>
+          <a href="#" class="btn secondary" data-close>H O M E</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
 
   <footer id="contacts" style="opacity:.7;text-align:center;padding:32px 16px;font-size:14px">
     © <span id="year"></span> Mentinella Studio
   </footer>
 
+  <!-- PANEL PROJECT (schermata nera centrata con messaggio) -->
+  <section id="panel-project" class="panel" aria-label="Project">
+    <div class="panel-inner">
+      <div class="eyebrow">PROJECT</div>
+      <p class="p-30">Stay tuned for more. If you are interested, get in touch with us.</p>
+
+      <div class="actions">
+        <a href="#contacts" class="btn">CONTACTS</a>
+        <a href="#" class="btn secondary" data-close>H O M E</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Router semplice su hash: #about / #contacts / #at7am / #crispy / #turbines / #caffe
+  const panels = {
+    about: document.getElementById('panel-about'),
+    contacts: document.getElementById('panel-contacts'),
+    project: document.getElementById('panel-project')
+  };
+  const projectSlugs = new Set(['at7am','crispy','turbines','caffe']);
+
+  function openPanel(name){
+    Object.values(panels).forEach(p => p.classList.remove('show'));
+    if (panels[name]) panels[name].classList.add('show');
+  }
+  function closePanels(){
+    Object.values(panels).forEach(p => p.classList.remove('show'));
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+  }
+  function syncFromHash(){
+    const h = (location.hash || '').replace('#','').toLowerCase();
+    if (h === 'about' || h === 'contacts') {
+      openPanel(h);
+    } else if (projectSlugs.has(h)) {
+      openPanel('project');
+    } else {
+      closePanels();
+    }
+  }
+  window.addEventListener('hashchange', syncFromHash);
+  syncFromHash();
+
+  // Bottoni close
+  document.querySelectorAll('[data-close]').forEach(btn=>{
+    btn.addEventListener('click', e=>{ e.preventDefault(); closePanels(); });
+  });
+
+  // Form -> compose mailto a giuseppe@mentinella.com
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const surname = document.getElementById('surname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const services = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+      .map(i => i.value).join(', ') || '—';
+
+    const to = 'giuseppe@mentinella.com';
+    const subject = `New contact from mentinella.com`;
+    const body =
+`Name: ${name}
+Surname: ${surname}
+Email: ${email}
+
+Services: ${services}
+
+Message:
+${message}`;
+
+    const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = href;
+  });
+</script>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Router semplice su hash: #about / #contacts aprono pannelli fullscreen
+    const panels = {
+      about: document.getElementById('panel-about'),
+      contacts: document.getElementById('panel-contacts')
+    };
+
+    function openPanel(name){
+      Object.values(panels).forEach(p => p.classList.remove('show'));
+      if (panels[name]) panels[name].classList.add('show');
+    }
+    function closePanels(){
+      Object.values(panels).forEach(p => p.classList.remove('show'));
+      // pulisci hash senza ricaricare
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+    function syncFromHash(){
+      const h = (location.hash || '').replace('#','').toLowerCase();
+      if (h === 'about' || h === 'contacts') openPanel(h); else closePanels();
+    }
+    window.addEventListener('hashchange', syncFromHash);
+    syncFromHash();
+
+    // Bottoni close
+    document.querySelectorAll('[data-close]').forEach(btn=>{
+      btn.addEventListener('click', e=>{ e.preventDefault(); closePanels(); });
+    });
+
+    // Form -> compose mailto a giuseppe@mentinella.com
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const surname = document.getElementById('surname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const services = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+        .map(i => i.value).join(', ') || '—';
+
+      const to = 'giuseppe@mentinella.com';
+      const subject = `New contact from mentinella.com`;
+      const body =
+`Name: ${name}
+Surname: ${surname}
+Email: ${email}
+
+Services: ${services}
+
+Message:
+${message}`;
+
+      const href = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = href;
+    });
+  </script>
 </body>
 </html>
