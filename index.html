@@ -4,157 +4,86 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentinella Studio</title>
-
-  <!-- Google Fonts: Inter 400/500 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* ====== Base & Theme ====== */
-    *,*::before,*::after{box-sizing:border-box}
+    /* Pagina & font */
     html,body{height:100%}
-    :root{
-      /* Larghezza desktop di riferimento per le misure “esatte” */
-      --container: 1180px;
+    body{margin:0;background:#000;color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.}
+    a{color:#fff;text-decoration:none}
 
-      /* Tipografia desktop “pixel perfect” (come richiesto) */
-      --wordmark-desktop: 20px;     /* Inter Regular 20 */
-      --proj-desktop:     50px;     /* Inter Medium 50 */
-      --eyebrow-desktop:  20px;     /* ABOUT label, Medium 20 */
+    /* Navbar fissa in alto-sx */
+    .fixed-nav{position:fixed;top:10px;left:16px;z-index:10}
+    .fixed-nav a{margin-right:18px;font-weight:500;font-size:10px}
 
-      --p37: 37px;
-      --p25: 25px;
-      --p30: 30px;
+    /* Canvas SVG responsive che mantiene posizioni 1:1 */
+    .hero-svg{display:block;width:100%;height:auto}
 
-      /* Riduzioni morbide su mobile */
-      --wordmark: clamp(18px, 2.2vw, var(--wordmark-desktop));
-      --proj:     clamp(22px, 5.4vw, var(--proj-desktop));
-      --eyebrow:  clamp(16px, 2.2vw, var(--eyebrow-desktop));
+    /* Sezione ABOUT (ancora) */
+    .about-wrap{max-width:880px;margin:40px auto 80px;padding:0 16px}
+    .about-eyebrow{font-weight:500;opacity:.75;letter-spacing:.12em;margin-bottom:8px}
+    .about-wrap p{font-size:22px;margin:.6rem 0}
+    .about-wrap em{font-style:italic}
 
-      --p37r: clamp(20px, 4.2vw, var(--p37));
-      --p25r: clamp(18px, 2.8vw, var(--p25));
-      --p30r: clamp(18px, 3.2vw, var(--p30));
-
-      --track-wide: .35em;
-      --rule: rgba(255,255,255,.14);
-      --gap: clamp(18px, 4vw, 56px);
-    }
-
-    body{
-      margin:0; background:#000; color:#fff;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height:1.5;
-    }
-    a{color:#fff; text-decoration:none}
-    a:hover{opacity:.85}
-    a:focus-visible{outline:2px dashed #fff; outline-offset:4px}
-
-    /* ====== Header fisso, centrato ====== */
-    .site-header{
-      position:fixed; inset:0 0 auto 0; /* top fixed */
-      display:flex; justify-content:center; align-items:center;
-      padding:10px 16px; z-index:20;
-      background:linear-gradient(180deg, rgba(0,0,0,.85), rgba(0,0,0,0));
-      backdrop-filter:saturate(120%) blur(2px);
-    }
-    .site-header nav{display:flex; gap:24px}
-    .nav-link{font-weight:500; font-size:var(--eyebrow)}
-
-    /* ====== Layout principale ====== */
-    main{max-width:var(--container); margin:0 auto; padding:72px 16px 40px}
-
-    /* Wordmark centrato, Inter Reg 20, tracking ampio */
-    .hero{display:grid; place-items:center; padding: clamp(32px, 10vh, 120px) 0 0}
-    .wordmark{
-      margin:0; text-align:center; line-height:1.15;
-      font-size: var(--wordmark); font-weight:400; letter-spacing: var(--track-wide); text-indent: var(--track-wide);
-    }
-
-    /* Griglia: colonna ABOUT + colonna progetti a destra */
-    .content{
-      display:grid; gap:var(--gap);
-      grid-template-columns: 1fr; align-items:start;
-      padding: clamp(24px, 6vh, 64px) 0 clamp(40px, 12vh, 100px);
-    }
-
-    /* ABOUT centrato */
-    .about{justify-self:center; text-align:center}
-    .eyebrow{font-weight:500; font-size:var(--eyebrow); letter-spacing:.12em; opacity:.75; margin-bottom:8px}
-    .p-37{font-size:var(--p37r); margin:.25rem 0}
-    .p-25{font-size:var(--p25r); margin:.75rem 0}
-    .p-30{font-size:var(--p30r); margin:.9rem 0}
-    .about em{font-style:italic}
-
-    /* Progetti a destra, Inter Medium 50 desktop */
-    .projects{justify-self:center}
-    .project-list{list-style:none; margin:0; padding:0; width:min(100%, 520px)}
-    .project{
-      display:block; border-bottom:1px solid var(--rule);
-      padding:.5rem 0; font-weight:500; font-size:var(--proj); text-align:right;
-    }
-
-    /* Footer */
-    .site-footer{opacity:.7; text-align:center; padding:32px 16px; font-size:clamp(12px, 1.2vw, 16px)}
-
-    /* ====== Desktop: due colonne ====== */
-    @media (min-width: 900px){
-      .content{
-        grid-template-columns: minmax(520px, 1fr) minmax(260px, 420px);
-        gap: calc(var(--gap) * 1.2);
-      }
-      .about{justify-self:start; text-align:center} /* testo centrato ma blocco nella colonna di sinistra */
-      .projects{justify-self:end}
-      .project-list{width:360px}
-    }
+    /* Effetto shrink sui link di destra dentro la SVG (via JS: class .shrink) */
+    .shrink #proj text{font-size:28px !important}
   </style>
 </head>
 <body>
-  <!-- Header centrato, fisso -->
-  <header class="site-header" aria-label="Navigazione">
-    <nav>
-      <a class="nav-link" href="#about">about</a>
-      <a class="nav-link" href="#contacts">contacts</a>
-    </nav>
-  </header>
+  <!-- Nav fissa (non scorre) -->
+  <div class="fixed-nav">
+    <a href="#about">about</a>
+    <a href="#contacts">contacts</a>
+  </div>
 
-  <main>
-    <!-- Wordmark centrato -->
-    <section class="hero" aria-label="Wordmark">
-      <h1 class="wordmark">M&nbsp;E&nbsp;N&nbsp;T&nbsp;I&nbsp;N&nbsp;E&nbsp;L&nbsp;L&nbsp;A&nbsp;&nbsp;S&nbsp;T&nbsp;U&nbsp;D&nbsp;I&nbsp;O</h1>
-    </section>
+  <!-- TAVOLA PRINCIPALE come SVG: posizioni identiche, scala perfetta -->
+  <svg class="hero-svg" viewBox="0 0 1959 2031" aria-label="Mentinella Studio">
+    <!-- Wordmark (centrato secondo tavola) -->
+    <text x="980" y="420" text-anchor="middle" fill="#fff" font-size="84" font-family="Inter" font-weight="500" letter-spacing=".35em">
+      M  E  N  T  I  N  E  L  L  A
+    </text>
+    <text x="980" y="540" text-anchor="middle" fill="#fff" font-size="84" font-family="Inter" font-weight="700" letter-spacing=".35em">
+      S  T  U  D  I  O
+    </text>
 
-    <!-- Griglia principale -->
-    <section class="content">
-      <!-- ABOUT centrato -->
-      <div class="about" id="about">
-        <div class="eyebrow">ABOUT</div>
+    <!-- Links laterali a destra: /AT 7AM, ecc. (cliccabili) -->
+    <g id="proj" font-family="Inter" font-weight="500" fill="#fff">
+      <a xlink:href="#at7am"><text x="1621" y="748" font-size="50" text-anchor="middle">/AT 7AM</text></a>
+      <a xlink:href="#crispy"><text x="1550" y="808" font-size="50" text-anchor="middle">/CRISPY JAZZ BACON</text></a>
+      <a xlink:href="#turbines"><text x="1620" y="868" font-size="50" text-anchor="middle">/LES TURBINES</text></a>
+      <a xlink:href="#caffe"><text x="1605" y="928" font-size="50" text-anchor="middle">/MENTINELLA CAFFE</text></a>
+      <!-- sottili linee divisori come nel mockup -->
+      <line x1="1260" y1="770" x2="1900" y2="770" stroke="rgba(255,255,255,.18)"/>
+      <line x1="1260" y1="830" x2="1900" y2="830" stroke="rgba(255,255,255,.12)"/>
+      <line x1="1260" y1="890" x2="1900" y2="890" stroke="rgba(255,255,255,.12)"/>
+      <line x1="1260" y1="950" x2="1900" y2="950" stroke="rgba(255,255,255,.12)"/>
+    </g>
 
-        <p class="p-37">From creative communication to tech solutions,</p>
-        <p class="p-37">and the timeless essence of <em>Italian traditions</em>.</p>
+    <!-- “ABOUT” label nella posizione del PDF -->
+    <text x="980" y="1258" text-anchor="middle" fill="#fff" font-size="20" font-family="Inter" font-weight="500" letter-spacing=".12em">
+      ABOUT
+    </text>
 
-        <p class="p-25">Mentinella Studio embraces a 360-degree approach to<br>
-          the needs and languages of the contemporary world.</p>
+    <!-- (Opzionale) un piccolo indicatore per scroll -->
+    <!-- <text x="980" y="1150" text-anchor="middle" fill="#fff" font-size="14" opacity=".5">scroll</text> -->
+  </svg>
 
-        <p class="p-30">From fashion to food and beyond, our projects aim to elevate<br>
-          human creativity and celebrate the beauty of conscious living.</p>
+  <!-- Sezione ABOUT (ancora di destinazione) -->
+  <section id="about" class="about-wrap" aria-label="About">
+    <div class="about-eyebrow">ABOUT</div>
 
-        <p class="p-30">Prioritizing quality and meaningful connections.</p>
-      </div>
+    <p style="font-size:37px">From creative communication to tech solutions,</p>
+    <p style="font-size:37px">and the timeless essence of <em>Italian traditions</em>.</p>
 
-      <!-- Progetti a destra -->
-      <aside class="projects" aria-label="Projects">
-        <ul class="project-list">
-          <li><a href="#" class="project">/AT 7AM</a></li>
-          <li><a href="#" class="project">/CRISPY JAZZ BACON</a></li>
-          <li><a href="#" class="project">/LES TURBINES</a></li>
-          <li><a href="#" class="project">/MENTINELLA CAFFE</a></li>
-        </ul>
-      </aside>
-    </section>
-  </main>
+    <p style="font-size:25px"><em>Mentinella Studio</em> embraces a 360-degree approach to<br>
+      the needs and languages of the contemporary world.</p>
 
-  <footer id="contacts" class="site-footer">
+    <p style="font-size:30px">From fashion to food and beyond, our projects aim to elevate<br>
+      human creativity and celebrate the beauty of conscious living.</p>
+
+    <p style="font-size:30px">Prioritizing quality and meaningful connections.</p>
+  </section>
+
+  <footer id="contacts" style="opacity:.7;text-align:center;padding:32px 16px;font-size:14px">
     © <span id="year"></span> Mentinella Studio — All rights reserved
   </footer>
 
@@ -162,17 +91,23 @@
     // Anno footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Scroll morbido (qualora non fosse nativo)
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if(el){
-          e.preventDefault();
-          el.scrollIntoView({behavior:'smooth', block:'start'});
+    // Effetto: rimpicciolisci i link di destra mentre si scorre (mantieni posizioni)
+    (function(){
+      const svg = document.querySelector('.hero-svg');
+      const projGroup = document.getElementById('proj');
+      if(!svg || !projGroup) return;
+
+      const heroHeightPx = 700; // circa: regola se vuoi la soglia più alta/bassa
+      function onScroll(){
+        if(window.scrollY > heroHeightPx){
+          projGroup.classList.add('shrink');
+        }else{
+          projGroup.classList.remove('shrink');
         }
-      });
-    });
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, {passive:true});
+    })();
   </script>
 </body>
 </html>
